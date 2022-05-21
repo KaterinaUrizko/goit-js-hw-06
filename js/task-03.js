@@ -16,10 +16,11 @@ const images = [
 
 
 const createLi = images.map(image=>
-  ` <li>  <img src = ${image.url} alt = ${image.alt} width = "200" height = "150" > </li>`
-);
+  ` <li>  <img src = ${image.url} alt = '${image.alt}' width = "200" height = "150"> </li>`
+).join("");
 
 const gallery = document.querySelector('.gallery');
 
 gallery.insertAdjacentHTML("beforeend", createLi);
+
 
